@@ -1,0 +1,198 @@
+
+@font-face {
+  font-family: 'impossible';
+  src: url('/public/impossible.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'insane';
+  src: url('/public/insane.ttf') format('truetype');
+}
+
+.App {
+  text-align: center;
+  background-color: #ffabaf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+	height: 100vh;
+  padding-top:96px;
+}
+
+.App .Controls {
+  max-width: 640px;
+  padding: 0 6px;
+  flex: 0 0 auto;
+}
+
+.App .Controls .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ClassifierSelect {
+  font-size: 16px;
+  text-align: left;
+}
+
+.App .Controls .ClassifierSelect {
+  flex: 2;
+}
+
+.App .Controls .HitFactorInput {
+  flex: 1;
+}
+
+.App .DivisionCard.container {
+  font-size: 12px;
+  width: 196px;
+}
+
+.DivisionCardTitle {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  margin: 2px -2px;
+  font-size: 16px;
+}
+
+.DivisionCardTitle .DivisionCardDifficultyPill {
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 6px;
+  background-color: blue;
+  width: auto;
+  height: 17px;
+  margin-left: 8px;
+  position: relative;
+  top: 4px;
+  padding: 0px 6px;
+}
+
+.DivisionCardTitle .DivisionCardDifficultyPill.impossible {
+  background-color: rgba(0,0,0, 75%);
+  color: white;
+  font-family: 'impossible', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'impossible';
+}
+
+.DivisionCardTitle .DivisionCardDifficultyPill.insane {
+  background-color: rgba(193,12,12, 90%);
+  color: black;
+  font-family: 'insane', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'insane';
+}
+
+.DivisionCardTitle .DivisionCardDifficultyPill.very-hard {
+  background-color: rgba(256,93,11, 88%);
+  color: black;
+  font-weight: bold;
+}
+
+.DivisionCardTitle .DivisionCardDifficultyPill.hard {
+  background-color: rgba(239,93,11, 86%);
+  color: black;
+}
+
+.DivisionCardTitle .DivisionCardDifficultyPill.fair {
+  background-color: rgba(11,164,209, 85%);
+  color: black;
+}
+
+.DivisionCardTitle .DivisionCardDifficultyPill.easy {
+  background-color: rgba(142,209,11, 78%);
+  color: black;
+}
+
+.App .HHFTable.container {
+  max-width: 640px;
+  flex: 0 0 auto;
+}
+
+.HHFTable .HHFTable-row {
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+  .HHFTable .HHFTable-row .DivisionCard.container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.HHFTable .HHFTable-row .DivisionCard div.col.DivisionCard-classInfo {
+  display: flex;
+  padding: 0 8px;
+}
+
+.App .HistoricalTable.row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 640px;
+  max-width: 640px;
+  flex: 1 1 auto;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.App .HistoricalTable.row .DivisionCard {
+  max-width: 640px;
+  width: 640px;
+}
+
+.App .HistoricalTable.row .DivisionCard .DivisionCardTitle {
+  text-align: center;
+  border-color: rgba(0,0,0,50%);
+  margin-top: 6px;
+}
+
+.DivisionCard-class {
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+}
+
+.DivisionCard-classHF {
+  flex: 1;
+  text-align: right;
+}
+
+.InputHF {
+  text-align: right;
+}
+
+span.b {
+  font-weight: bold;
+}
